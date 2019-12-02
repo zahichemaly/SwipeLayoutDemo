@@ -22,6 +22,8 @@ class MainActivity : AppCompatActivity() {
 
         partList.add(Part("Power Supply", 50f))
         partList.add(Part("CPU Cooler", 110f))
+        partList.add(Part("GPU", 330f))
+        partList.add(Part("Motherboard", 100f))
 
         userViewAdapter = UserViewAdapter(this, userList)
         partsViewAdapter = PartsViewAdapter(this, partList.toList())
