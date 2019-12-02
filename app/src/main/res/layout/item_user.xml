@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="60dp"
+    xmlns:swipe="http://schemas.android.com/apk/res-auto">
+
+    <com.daimajia.swipe.SwipeLayout
+        android:id="@+id/swipe_layout"
+        android:layout_width="match_parent"
+        swipe:drag_edge="right"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/red"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/trash"
+                android:layout_width="27dp"
+                android:layout_height="30dp"
+                android:layout_weight="1"
+                android:src="@drawable/ic_delete"
+                android:contentDescription="Trash icon" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:text="Delete Item?"
+                android:textColor="#fff"
+                android:textSize="17sp" />
+
+            <Button
+                android:id="@+id/delete"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="4"
+                android:background="#ffffff"
+                android:text="Yes, Delete"
+                android:textColor="#FF5534" />
+        </LinearLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:background="@color/grey"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/user_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="15dp"
+                swipe:layout_constraintTop_toTopOf="parent"
+                swipe:layout_constraintLeft_toLeftOf="parent"
+                android:text="User ID"/>
+
+            <TextView
+                android:id="@+id/user_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                swipe:layout_constraintLeft_toLeftOf="parent"
+                swipe:layout_constraintTop_toBottomOf="@id/user_id"
+                android:text="User name" />
+
+            <View
+                android:id="@+id/divider"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/black"
+                swipe:layout_constraintBottom_toBottomOf="parent">
+
+            </View>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.daimajia.swipe.SwipeLayout>
+</LinearLayout>
